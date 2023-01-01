@@ -1,4 +1,4 @@
-
+ @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Kumbh+Sans&family=Montserrat:wght@500&family=Outfit:wght@400;700&family=Rubik+Vinyl&family=Space+Grotesk:wght@500&family=Unbounded:wght@300&display=swap');
 
 /* basic settings */
 
@@ -19,10 +19,108 @@
     
     /* css reset */
     
-    *{
+    * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
     }
     
+    body {
+        font-family: 'Space Grotesk', sans-serif;
+        background-image: url('./images/bg-main-desktop.png'); 
+        background-repeat: no-repeat;
+    }
      
+    main {
+        display: flex;
+        flex-flow: row ;
+    }
+
+    .form-holder {
+           border: 1px solid red;
+           margin-top: 10rem; 
+           margin-left: 2rem;
+           margin-right: 7rem;
+
+    }
+
+    form {
+        display: flex;
+        flex-flow: column;
+        margin: 1rem;
+        
+    }
+    
+    .cardname,.cardnum,button, .exp,.cvc{
+        display: flex;
+        flex-direction: column;
+        margin: 1rem;
+    }
+    
+    label {
+        color: var(--Verydarkviolet);
+        font-size: 12px;
+        margin-bottom: 2rem;
+    }
+    input {
+        border-radius: 0.5rem;
+        padding: 0.4rem;
+        width: 80%;
+        border-color: var(--Lightgrayishviolet);
+        
+    }
+
+    .expiryArea {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    
+    .yearArea {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .yearArea input {
+        margin: 0.2rem;
+        width: 40%;
+        padding: 0.3rem;
+    }
+
+    .cvc input{
+        margin-right: 0px;
+        width: 50%;
+    }
+
+
+    .card-holder {
+        display: flex;
+        flex-direction: column;
+        z-index: 1;
+        margin-top: 8rem;
+        margin-left:  14.25rem;  
+        align-items: flex-start;
+        flex-basis: content;
+    }
+
+    .front-card {
+        background-image: url('./images/bg-card-front.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 11rem;
+        width:20rem;
+       
+    }
+
+    .back-card {
+         background-image: url('./images/bg-card-back.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-left: 4em;
+        margin-top: 1.2em;
+        height: 11rem;
+        width:20rem;
+    } 
+
+    
+
