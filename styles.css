@@ -34,13 +34,17 @@
     main {
         display: flex;
         flex-flow: row ;
+        justify-content: space-between;
     }
 
     .form-holder {
-           border: 1px solid red;
+            background-color: var(--White) ;
+          
+           border-radius: 5%;
            margin-top: 10rem; 
-           margin-left: 2rem;
-           margin-right: 7rem;
+           margin-left: 0rem;
+           margin-right: 6rem;
+           width: 450px;
 
     }
 
@@ -60,20 +64,19 @@
     label {
         color: var(--Verydarkviolet);
         font-size: 12px;
-        margin-bottom: 2rem;
     }
     input {
+        margin-top: 0.4rem;
         border-radius: 0.5rem;
         padding: 0.4rem;
         width: 80%;
-        border-color: var(--Lightgrayishviolet);
-        
+        border: 1px solid var(--White);
+        box-shadow: 1px 1px  1px 2px var(--Lightgrayishviolet) ;        
     }
 
     .expiryArea {
         display: flex;
-        flex-direction: row;
-        justify-content: space-around;
+        flex-direction: row; 
     }
     
     .yearArea {
@@ -82,16 +85,42 @@
     }
 
     .yearArea input {
-        margin: 0.2rem;
+         margin: 0.2rem; 
         width: 40%;
-        padding: 0.3rem;
+        margin-top: 0.4rem;
+    }
+  .exp {
+      width: 40%;
+  }
+    .cvc {
+        margin-left: 0px;
+        margin-right: 40px;
+     
     }
 
-    .cvc input{
-        margin-right: 0px;
-        width: 50%;
+    .cvc input {
+        width: 70%;
     }
 
+    button {
+        border-radius: 0.5rem;
+        padding: 0.5rem;
+        width: 75%;
+        border-color: transparent;
+        margin-right: 2em;
+        background-color: var(--Verydarkviolet);
+        font-size: large;
+        color: var(--White);
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    .button-area :hover {
+        background-color: var(--Lightgrayishviolet);
+    }
+  
 
     .card-holder {
         display: flex;
@@ -109,8 +138,44 @@
         background-size: cover;
         height: 11rem;
         width:20rem;
+        display: flex;
+        flex-direction: column;
+        color: var(--White);
+        font-size: 0.9rem;
+    }
+
+    .card-logo {
+        margin-left: 1.5rem;
+        margin-top: 1rem;
+        margin-bottom: 2.8rem;
+    }
+
+
+    .card-number {
+        margin-left: 1.5rem;
+        word-spacing: 0.2rem;
+        letter-spacing: 0.2rem;
+        margin-bottom: 0.8rem; 
+    }
+
+    .name-exp {
+        display: flex;
+        margin-left: 1.5rem;
+        font-size: 0.8rem;
+        
+    }
+    .card-name {
+         margin-right: 7.9rem;
+    }
+
+    .expiry-card {
        
     }
+
+
+
+    
+
 
     .back-card {
          background-image: url('./images/bg-card-back.png');
@@ -122,5 +187,11 @@
         width:20rem;
     } 
 
+    .cvc-number {
+        margin-left: 16rem;
+        margin-top: 4.9rem;
+        color: var(--White);
+        font-size: small;
+    }
     
 

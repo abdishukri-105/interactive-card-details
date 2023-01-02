@@ -43,11 +43,26 @@
         <div class="card-holder">
 
           <div class="front-card">
-             <!-- <img src="./images/bg-card-front.png" alt="front-side-card"> -->
-            vdv
+             <div class="card-logo">
+                <img src="./images/card-logo.svg" alt="card-logo">
+             </div>
+             <div class="card-number">
+                <span id="1-num">0000</span>  <span id="2-num">0000</span> <span id="3-num">0000</span>  <span id="4-num">0000</span>
+             </div>
+             <div class="name-exp">
+                <div class="card-name">
+                    <p>JANE APPLESEED</p>
+                </div>
+                <div class="expiry-card">
+                    <span id="exp-month">00</span>/<span id="exp-year">00</span>
+                </div>
+            </div>
+        
           </div>
           <div class="back-card">
-            <!-- <img src="./images/bg-card-back.png" alt="back-side-card"> -->
+             <div class="cvc-number">
+                <span id="cvc-num">000</span>
+             </div>
             
           </div>
         </div>
@@ -69,15 +84,17 @@
                        <input name="experationdateyear" type="text" placeholder="YY">
                     </div>
                     </label>
-                    
+
                     <label class="cvc">
                     <span class="cvcnum">CVC</span>
                     <input name="cvcnumber" type="text" placeholder="e.g. 123">
                     </label>
                 </div>
-                <button type="submit">
-                  confirm
-                </button>
+                <div class="button-area">
+                    <button type="submit">
+                    <p>confirm</p> 
+                    </button>
+                </div> 
               </form>
         </div>
     </main>
