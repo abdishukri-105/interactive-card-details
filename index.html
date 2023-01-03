@@ -67,29 +67,37 @@
           </div>
         </div>
         <div class="form-holder">
-            <form id="card-form">
+            <form id="card-form" novalidate>
                 <label class="cardname">
                   <span class="nmoncd">CARDHOLDER NAME</span>
-                  <input name="cardholdername" type="text" placeholder="e.g. jane Appleseed" required>
+                  <input name="cardholdername" type="text" id="cardholdername" placeholder="e.g. jane Appleseed" required>
+                  <span class="cardNameerror" aria-live="polite"></span>
                 </label>
+
                 <label class="cardnum"> 
                   <span class="cdnum">CARD NUMBER</span>
-                  <input name="cardnumber" type="text" placeholder="e.g. 1234 5678 9123 0000" required minlength="16" maxlength="16">
+                  <input name="cardnumber" type="text" id="cardnumber" placeholder="e.g. 1234 5678 9123 0000" required >
+                  <span class="errorcardNumber" aria-live="polite"></span>
                 </label>
+
                 <div class="expiryArea">
                     <label class="exp">
                     <span class="expdt">EXP. DATE(MM/YY)</span>
                     <div class="yearArea">
-                       <input name="experationdatemonth" type="text" placeholder="MM" required minlength="1" maxlength="2">
-                       <input name="experationdateyear" type="text" placeholder="YY" required minlength="1" maxlength="2">
+                       <input name="experationdatemonth" type="text"   id="experationdatemonth" placeholder="MM" required minlength="1" maxlength="2">
+                       <span class="error" aria-live="polite"></span>
+                       <input name="experationdateyear" type="text" id="experationdateyear" placeholder="YY" required minlength="1" maxlength="2">
+                       <span class="error" aria-live="polite"></span>
                     </div>
                     </label>
 
                     <label class="cvc">
                     <span class="cvcnum">CVC</span>
-                    <input name="cvcnumber" type="text" placeholder="e.g. 123">
+                    <input name="cvcnumber" type="text" placeholder="e.g. 123" id="cvcnumber" required maxlength="3" minlength="1">
+                    <span class="error" aria-live="polite"></span>
                     </label>
                 </div>
+
                 <div class="button-area">
                     <button type="submit">
                     <p>confirm</p> 
