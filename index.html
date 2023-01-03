@@ -47,7 +47,7 @@
                 <img src="./images/card-logo.svg" alt="card-logo">
              </div>
              <div class="card-number">
-                <span id="1-num">0000</span>  <span id="2-num">0000</span> <span id="3-num">0000</span>  <span id="4-num">0000</span>
+                <span class="spanNum">0000</span>  <span id="2-num">0000</span> <span id="3-num">0000</span>  <span id="4-num">0000</span>
              </div>
              <div class="name-exp">
                 <div class="card-name">
@@ -67,21 +67,21 @@
           </div>
         </div>
         <div class="form-holder">
-            <form>
+            <form id="card-form">
                 <label class="cardname">
                   <span class="nmoncd">CARDHOLDER NAME</span>
-                  <input name="cardholdername" type="text" placeholder="e.g. jane Appleseed">
+                  <input name="cardholdername" type="text" placeholder="e.g. jane Appleseed" required>
                 </label>
                 <label class="cardnum"> 
                   <span class="cdnum">CARD NUMBER</span>
-                  <input name="cardnumber" type="text" placeholder="e.g. 1234 5678 9123 0000">
+                  <input name="cardnumber" type="text" placeholder="e.g. 1234 5678 9123 0000" required minlength="16" maxlength="16">
                 </label>
                 <div class="expiryArea">
                     <label class="exp">
                     <span class="expdt">EXP. DATE(MM/YY)</span>
                     <div class="yearArea">
-                       <input name="experationdatemonth" type="text" placeholder="MM">
-                       <input name="experationdateyear" type="text" placeholder="YY">
+                       <input name="experationdatemonth" type="text" placeholder="MM" required minlength="1" maxlength="2">
+                       <input name="experationdateyear" type="text" placeholder="YY" required minlength="1" maxlength="2">
                     </div>
                     </label>
 

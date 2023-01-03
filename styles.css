@@ -74,6 +74,15 @@
         box-shadow: 1px 1px  1px 2px var(--Lightgrayishviolet) ;        
     }
 
+    input:invalid {
+        border: 1px solid red;
+      }
+      
+      input:valid {
+        border: 2px solid black;
+      }
+      
+
     .expiryArea {
         display: flex;
         flex-direction: row; 
@@ -153,9 +162,13 @@
 
     .card-number {
         margin-left: 1.5rem;
-        word-spacing: 0.2rem;
-        letter-spacing: 0.2rem;
+        word-spacing: 0.2rem; 
+        /* letter-spacing: 0.2rem;  */
         margin-bottom: 0.8rem; 
+    }
+    
+    .spanNum {
+        margin-right: 2rem;
     }
 
     .name-exp {
@@ -167,15 +180,6 @@
     .card-name {
          margin-right: 7.9rem;
     }
-
-    .expiry-card {
-       
-    }
-
-
-
-    
-
 
     .back-card {
          background-image: url('./images/bg-card-back.png');
