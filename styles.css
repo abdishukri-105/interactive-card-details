@@ -45,7 +45,7 @@
            margin-left: 0rem;
            margin-right: 6rem;
            width: 450px;
-
+         
     }
 
     form {
@@ -198,4 +198,6 @@
         font-size: small;
     }
     
-
+.success-message {
+   border-color: 1px solid red;
+} 

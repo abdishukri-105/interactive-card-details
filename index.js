@@ -22,11 +22,25 @@ form.addEventListener("submit", (e) => {
     e.preventDefault()
 
     renderCard()
-
+   renderSuccessMessage()
 
 })
 
 
+// show success message after submit
+
+function renderSuccessMessage() {
+   const successMessage = document.querySelector(".success-message")
+   successMessage.innerHTML = `
+                                <img src="./images/icon-complete.svg" alt = "tick-icon">
+                                <p>We've added your card details
+                                    <button> continue</button>
+                                    </p>
+                                `
+   successMessage.style.display = "block"
+   successMessage.className.add(".success-message")
+   form.style.display = 'none'
+}
 
 
 
