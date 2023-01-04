@@ -46,11 +46,12 @@ function validateCardholder(cardName){
   function validateCardExpiryMonth(cardExpiryMonth){
     const errorMessage = document.querySelector('.errormonth');
     const inputmonth = document.getElementsByTagName("input")[2]
-       inputmonth.style.borderColor = "red"
     if ( cardExpiryMonth == ''){
        errorMessage.textContent = "Error: expiry cannot be blank";
+       inputmonth.style.borderColor = "red"
     } else if (cardExpiryMonth > 12 || cardExpiryMonth < 1){
         errorMessage.textContent = "Error: please enter a valid digit";
+        inputmonth.style.borderColor = "red"
     } 
       
   }
@@ -58,11 +59,13 @@ function validateCardholder(cardName){
   function validateCardExpiryYear(cardExpiryYear){
     const errorMessage = document.querySelector('.erroryear');
     const inputmonth = document.getElementsByTagName("input")[3]
-    inputmonth.style.borderColor = "red"
+    
     if ( cardExpiryYear == ''){
        errorMessage.textContent = "Error: expiry cannot be blank";
+       inputmonth.style.borderColor = "red"
     } else if (cardExpiryYear > 23 || cardExpiryYear < 1){
         errorMessage.textContent = "Error: please enter a valid digit";
+        inputmonth.style.borderColor = "red"
     } 
       
   }
@@ -70,9 +73,10 @@ function validateCardholder(cardName){
   function validateCardCVC(cardCVC){
     const errorMessage = document.querySelector('.errorcvc');
     const inputcvc = document.getElementsByTagName("input")[4]
-    inputcvc.style.borderColor = "red"
+   
     if ( cardCVC == ''){
        errorMessage.textContent = "Error: expiry cannot be blank";
+       inputcvc.style.borderColor = "red"
     }
       
   }
