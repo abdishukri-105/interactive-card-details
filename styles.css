@@ -172,14 +172,10 @@
     .card-number {
         margin-left: 1.5rem;
         word-spacing: 0.2rem; 
-        /* letter-spacing: 0.2rem;  */
         margin-bottom: 0.8rem; 
     }
     
-    .spanNum {
-        margin-right: 2rem;
-    }
-
+  
     .name-exp {
         display: flex;
         margin-left: 1.5rem;

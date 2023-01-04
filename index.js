@@ -5,7 +5,7 @@ const form = document.querySelector("#card-form")
 //  submit form
 form.addEventListener("submit", (e) => {
    e.preventDefault()
-
+   
 // Get the credit card number, expiration date, CVC, and cardholder from the form
    const cardName = document.getElementById("cardholdername").value
    const cardNumber =  document.getElementById("cardnumber").value
@@ -18,8 +18,16 @@ form.addEventListener("submit", (e) => {
    validateCardExpiryMonth(cardExpiryMonth)
    validateCardExpiryYear(cardExpiryYear)
    validateCardCVC(cardCVC)
-  renderOnCard(cardName, cardNumber, cardExpiryMonth, cardExpiryYear, cardCVC)
+    renderOnCard(cardName, cardNumber, cardExpiryMonth, cardExpiryYear, cardCVC)
+    
+ 
 })
+
+function displayThankYou(){
+    const successMessage = document.querySelector(".success-message")
+    form.style.display = "none"
+    successMessage.style.display = "block"
+}
 
 function validateCardholder(cardName){
     const errorMessage = document.querySelector('.error');
@@ -29,7 +37,7 @@ function validateCardholder(cardName){
        const inputname = document.getElementsByTagName("input")[0]
        inputname.style.borderColor = "red"
     } 
-   
+    
   }
 
   function validateCardNumber(cardNumber){
@@ -49,7 +57,7 @@ function validateCardholder(cardName){
     if ( cardExpiryMonth == ''){
        errorMessage.textContent = "Error: expiry cannot be blank";
        inputmonth.style.borderColor = "red"
-    } else if (cardExpiryMonth > 12 || cardExpiryMonth < 1){
+    } else if (cardExpiryMonth < 1){
         errorMessage.textContent = "Error: please enter a valid digit";
         inputmonth.style.borderColor = "red"
     } 
@@ -105,16 +113,3 @@ function renderOnCard(cardName, cardNumber, cardExpiryMonth, cardExpiryYear, car
 
 
 
-// show success message after submit
-function renderSuccessMessage() {
-    const successMessage = document.querySelector(".success-message")
-    successMessage.innerHTML = `
-                                 <img src="./images/icon-complete.svg" alt = "tick-icon">
-                                 <p>We've added your card details
-                                     <button> continue</button>
-                                     </p>
-                                 `
-    successMessage.style.display = "block"
-    successMessage.className.add(".success-message")
-    form.style.display = 'none'
- }
